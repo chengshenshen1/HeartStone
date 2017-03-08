@@ -1,0 +1,431 @@
+* {
+  font-family: "Microsoft YaHei UI";
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  -khtml-user-select: none;
+  user-select: none;
+  color: #1f3134;
+}
+@font-face {
+  font-family: 'iconfont';
+  /* project id 161571 */
+  src: url('http://at.alicdn.com/t/font_0e87ub8w08k9be29.eot');
+  src: url('http://at.alicdn.com/t/font_0e87ub8w08k9be29.eot?#iefix') format('embedded-opentype'), url('http://at.alicdn.com/t/font_0e87ub8w08k9be29.woff') format('woff'), url('http://at.alicdn.com/t/font_0e87ub8w08k9be29.ttf') format('truetype'), url('http://at.alicdn.com/t/font_0e87ub8w08k9be29.svg#iconfont') format('svg');
+}
+body {
+  -ms-user-select: none;
+  margin: 0;
+  padding: 0;
+}
+body .title {
+  height: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  width: 480px;
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 5px;
+  background-color: #e4d3a8;
+}
+body .title .content {
+  width: 95px;
+  height: 25px;
+  line-height: 25px;
+  border-right: 1px solid sandybrown;
+  cursor: pointer;
+}
+body .title .content:last-child {
+  border: none;
+}
+body .title .content:hover {
+  color: sandybrown;
+}
+body .main {
+  position: relative;
+}
+body .card {
+  width: 480px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #e4d3a8;
+  border-top: 1px solid sandybrown;
+  position: relative;
+}
+body .card .card_list {
+  width: 360px;
+  height: 490px;
+  padding-top: 10px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  display: flex;
+  flex-wrap: wrap;
+}
+body .card .card_list .card_content {
+  width: 100px;
+  margin-left: 10px;
+}
+body .card .card_list .card_content img {
+  width: 100px;
+  cursor: pointer;
+}
+body .card .picked_card {
+  width: 120px;
+}
+body .card .picked_card img {
+  width: 120px;
+  cursor: pointer;
+}
+body .card .picked_card ul {
+  margin: 0;
+  padding: 0;
+  height: 350px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+body .card .picked_card ul li {
+  position: relative;
+  list-style: none;
+  cursor: pointer;
+  margin-bottom: 3px;
+  background-size: 150px;
+  background-position: 0 -50px;
+  background-repeat: no-repeat;
+}
+body .card .picked_card ul li .cardItem {
+  position: relative;
+  overflow: hidden;
+  height: 20px;
+}
+body .card .picked_card ul li .cardItem p {
+  position: relative;
+  float: left;
+  line-height: 20px;
+  margin: 0;
+  z-index: 2;
+  color: #fff;
+  font-size: 15px;
+}
+body .card .picked_card ul li .cardItem .cardNum {
+  width: 20px;
+  height: 20px;
+  background-position: center;
+  background-size: 22px 22px;
+  background-image: url("../imag/data-image.png");
+  text-align: center;
+}
+body .card .picked_card ul li .cardItem .cardName {
+  font-size: 7px;
+}
+body .card .picked_card ul li .cardItem .cardItemBg .lazy {
+  position: absolute;
+  top: 0 ;
+  left: 5px;
+  height: 20px;
+  width: 110px;
+  z-index: 1;
+}
+body .card .picked_card ul li .cardItem .cardItemBg .star {
+  position: absolute;
+  right: 0;
+  height: 20px;
+  width: 20px;
+  z-index: 1;
+  display: none;
+}
+body .card .picked_card .card_num {
+  width: 120px;
+  height: 30px;
+  border-top: 1px solid sandybrown;
+  border-bottom: 1px solid sandybrown;
+  position: relative;
+}
+body .card .picked_card .card_num span {
+  display: inline-block;
+}
+body .card .picked_card .card_num span:first-child {
+  margin-left: 15px;
+  line-height: 30px;
+}
+body .card .picked_card .card_num span:last-child {
+  margin-left: 15px;
+  border: 1px solid sandybrown;
+  padding: 2px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+body .card .picked_card .card_num .reseted:hover {
+  color: #fff;
+  background-color: #f8b862;
+}
+body .card .picked_card .compelete {
+  width: 120px;
+  height: 30px;
+  text-align: center;
+  margin-top: 5px;
+  line-height: 30px;
+  cursor: pointer;
+  background-image: url('../imag/IMG_0900_burned1.png');
+  background-size: 120px 30px;
+  background-position: 0 29px;
+}
+body .card .picked_card .compelete_light {
+  width: 120px;
+  height: 30px;
+  text-align: center;
+  margin-top: 5px;
+  line-height: 30px;
+  cursor: pointer;
+  background-image: url('../imag/complete.png');
+  background-size: 120px 30px;
+  background-position: 0 29px;
+}
+body .classify {
+  width: 480px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  text-align: center;
+  margin-top: 10px;
+  position: absolute;
+  top: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-top: 1px solid sandybrown;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: #e4d3a8;
+  display: none;
+  z-index: 9;
+}
+body .classify .classify_list {
+  width: 80px;
+  height: 30px;
+  line-height: 30px;
+  border: 1px solid sandybrown;
+  border-radius: 15px;
+  box-sizing: border-box;
+  margin-left: 15px;
+  margin-bottom: 5px;
+  cursor: pointer;
+}
+body .classify .classify_list:first-child {
+  background-color: sandybrown;
+  color: #fff;
+}
+body .classify .classify_list:hover {
+  background-color: sandybrown;
+  color: #fff;
+}
+body .classification {
+  width: 480px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  text-align: center;
+  margin-top: 10px;
+  position: absolute;
+  top: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-top: 1px solid sandybrown;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: #e4d3a8;
+  display: none;
+  z-index: 9;
+}
+body .classification .classification_list {
+  width: 80px;
+  height: 30px;
+  line-height: 30px;
+  border: 1px solid sandybrown;
+  border-radius: 15px;
+  box-sizing: border-box;
+  margin-left: 15px;
+  margin-bottom: 5px;
+  cursor: pointer;
+}
+body .classification .classification_list:first-child {
+  background-color: sandybrown;
+  color: #fff;
+}
+body .classification .classification_list:hover {
+  background-color: sandybrown;
+  color: #fff;
+}
+body .consume {
+  width: 480px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  text-align: center;
+  margin-top: 10px;
+  position: absolute;
+  top: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-top: 1px solid sandybrown;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: #e4d3a8;
+  display: none;
+  z-index: 9;
+}
+body .consume .consume_list {
+  width: 80px;
+  height: 30px;
+  line-height: 30px;
+  border: 1px solid sandybrown;
+  border-radius: 15px;
+  box-sizing: border-box;
+  margin-left: 15px;
+  margin-bottom: 5px;
+  cursor: pointer;
+}
+body .consume .consume_list:first-child {
+  background-color: sandybrown;
+  color: #fff;
+}
+body .consume .consume_list:hover {
+  background-color: sandybrown;
+  color: #fff;
+}
+body .cardtype {
+  width: 480px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  text-align: center;
+  margin-top: 10px;
+  position: absolute;
+  top: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-top: 1px solid sandybrown;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: #e4d3a8;
+  display: none;
+  z-index: 9;
+}
+body .cardtype .cardtype_list {
+  width: 80px;
+  height: 30px;
+  line-height: 30px;
+  border: 1px solid sandybrown;
+  border-radius: 15px;
+  box-sizing: border-box;
+  margin-left: 15px;
+  margin-bottom: 5px;
+  cursor: pointer;
+}
+body .cardtype .cardtype_list:first-child {
+  background-color: sandybrown;
+  color: #fff;
+}
+body .cardtype .cardtype_list:hover {
+  background-color: sandybrown;
+  color: #fff;
+}
+body .cardhomeland {
+  width: 480px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  text-align: center;
+  margin-top: 10px;
+  position: absolute;
+  top: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-top: 1px solid sandybrown;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: #e4d3a8;
+  display: none;
+  z-index: 9;
+}
+body .cardhomeland .cardhomeland_list {
+  width: 100px;
+  height: 30px;
+  line-height: 30px;
+  border: 1px solid sandybrown;
+  border-radius: 15px;
+  box-sizing: border-box;
+  margin-left: 15px;
+  margin-bottom: 5px;
+  cursor: pointer;
+}
+body .cardhomeland .cardhomeland_list:first-child {
+  background-color: sandybrown;
+  color: #fff;
+}
+body .cardhomeland .cardhomeland_list:hover {
+  background-color: sandybrown;
+  color: #fff;
+}
+.maskcss {
+  width: 135%;
+  height: 100%;
+  background-color: transparent;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+.noticecss {
+  width: 160px;
+  height: 130px;
+  background-color: #f8b862;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 14;
+}
+.noticecss .close {
+  width: 20px;
+  height: 20px;
+  font-family: 'iconfont';
+  margin: 0;
+  padding: 0;
+  line-height: 20px;
+  position: absolute;
+  right: 0px;
+  text-align: center;
+  cursor: pointer;
+}
+.noticecss .close:hover {
+  background-color: sandybrown;
+  color: #fff;
+}
+.noticecss .notice_content {
+  height: 100px;
+  line-height: 100px;
+  text-align: center;
+}
+.noticecss .confirm {
+  width: 50px;
+  margin-left: 50px;
+  border: 1px solid sandybrown;
+  text-align: center;
+  cursor: pointer;
+}
+.noticecss .confirm:hover {
+  background-color: sandybrown;
+  color: #fff;
+}
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+  background-color: #F5F5F5;
+}
+/*定义滚动条轨道 内阴影+圆角*/
+::-webkit-scrollbar-track {
+  background-color: #e4d3a8;
+}
+/*定义滑块 内阴影+圆角*/
+::-webkit-scrollbar-thumb {
+  background-color: sandybrown;
+}
